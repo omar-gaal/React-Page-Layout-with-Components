@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
+import MediaCard from "./components/MediaCard";
 
 export default function App() {
   const [users, setUsers] = useState([]);
@@ -25,14 +26,7 @@ export default function App() {
       <Navigation />
       <Header />
       <MainContent />
-
       <Footer />
-      {users.map((user) => (
-        <div key={user.id}>
-          <h2>Hello, {user.name}</h2>
-          <p>Your email is {user.mail}</p>
-        </div>
-      ))}
     </main>
   );
 }
